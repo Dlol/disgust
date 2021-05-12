@@ -1,0 +1,133 @@
+.App{
+  background: #1d1d1d;
+  color: white;
+  margin: 10px 10%;
+  height: calc(100vh - 60px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 2px #00000083;
+}
+.form{
+  background: #0f0f0f;
+  position:fixed;
+  width: calc(80% - 40px);
+  left: 10%;
+  bottom: 10px;
+  padding: 20px;
+  height: 4rem;
+  display:grid;
+  grid-template-columns: 9fr minmax(50px, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+.form > textarea{
+  height: 4rem;
+  font-size: 3rem;
+  background: #00000000;
+  color: white;
+  border: 0px;
+}
+.form > button{
+  background: #2e2d2d;
+  color: white;
+  border: 0px;
+  border-radius: 10px;
+}
+.msg{
+  padding: 10px;
+  background: #141414;
+  border-radius: 10px;
+  word-wrap: break-word;
+  font-size: 2.2rem;
+  white-space: pre-line;
+  z-index: 4;
+}
+.message{
+  width: 100%;
+}
+.App-header{
+  box-shadow: 0px 10px 10px #00000060;
+  z-index: 5;
+  background: #1d1d1d;
+}
+.so{
+  font-size: 3rem;
+  margin: 0 auto;
+  width: 100%;
+  background: #00000000;
+  border: 0px;
+  color: white;
+  font-weight: bold;
+}
+section{
+  height: calc(100% - 9rem);
+  overflow:auto;
+}
+
+@media screen and (max-width:750px){
+  .form {
+    grid-template-columns: 1fr;
+    height: 8rem;
+  }
+  .form > button {
+    height: 4rem;
+  }
+  section{
+    height: calc(100% - 13rem);
+  }
+}
+@media screen and (max-width:425px){
+  .App{
+    margin: 10px 2%;
+  }
+  .form{
+    left:2%;
+    width: calc(96% - 40px);
+  }
+}
+.signin{
+  display:grid;
+  grid-template-areas: 'e e' 'p p' 'up in';
+  column-gap: 10px;
+  row-gap: 10px;
+  color:white;
+  padding: 10px;
+}
+.signin > *{
+  font-size: 3em;
+  text-align: center;
+  background: #2e2d2d;
+  border:0px solid #0f0f0f;
+  border-bottom-width: 4px;
+  color:white;
+  border-radius: 10px;
+  transition: all 0.5s;
+  box-shadow: 0px;
+  transform: translate(0px, 0px);
+}
+.signin > *:hover, .signin > *:focus{
+  border-bottom-color: #ffffff;
+  box-shadow: 5px 5px 5px 2px #00000083;
+  transform: translate(-5px, -5px)
+}
+.email{grid-area: e;}
+.password{grid-area: p;}
+.in{grid-area: in;}
+.up{grid-area: up;}
+
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: #0f0f0f;
+}
+::-webkit-scrollbar-thumb{
+  background: #2e2d2d;
+  transition: all 0.25s;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #444444;
+}
